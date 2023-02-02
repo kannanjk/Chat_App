@@ -9,6 +9,8 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 app.use(cors())
 
+const db =require('./Connection')
+
 
 const server = require('http').createServer(app)
 const port = 5000
@@ -23,3 +25,4 @@ const io = require('socket.io')(server,{
 server.listen(port,()=>{
     console.log("server running on ",port);
 })
+
