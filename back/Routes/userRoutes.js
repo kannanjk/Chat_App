@@ -23,8 +23,12 @@ router.post('/', async (req, res) => {
 // Login user
 router.post('/login',async(req,res)=>{
     try {
-        
+        const {email,password}= req.body
+        const user = await User.findByCredentials(email,password)
+        user.status='online'
+        await user.save()
+        res.status(200).json(user)
     } catch (error) {
-        
+        res.status(400).json(error.message)
     }
 })
