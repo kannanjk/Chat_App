@@ -1,4 +1,5 @@
 const express = require('express')
+const userRouter = require('./Routes/userRoutes')
 
 const app =express()
 
@@ -8,10 +9,10 @@ const rooms = ['general' , 'tech' , 'finance' , 'crypto']
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 app.use(cors())
-
+app.use("user",userRouter)
 const db =require('./Connection')
 
-
+ 
 const server = require('http').createServer(app)
 const port = 5000
 const io = require('socket.io')(server,{

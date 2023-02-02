@@ -9,7 +9,7 @@ import logo from "../assets/2321639.png"
 function navigation() {
     return (
         <Navbar bg="light" expand="lg">
-            <Container>
+            <Container> 
                 <LinkContainer to="/">
                 <Navbar.Brand>
                     <img src={logo} alt="logo" style={{width:50,height:50}} />
