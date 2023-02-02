@@ -4,7 +4,7 @@ import { ListGroup } from 'react-bootstrap';
 function Saidbar() {
   const rooms = ['first room', 'second room', 'third room']
   return (<>
-    <h1>Available rooms</h1>
+    <h2>Available rooms</h2>
     <ListGroup>
       {rooms.map((room, idx) => (
         <ListGroup.Item key={idx} >

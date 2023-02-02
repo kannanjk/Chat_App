@@ -9,7 +9,7 @@ function chat() {
       <Col md={4}>
         <Saidbar />
       </Col>
-      <Col md={8} >
+      <Col md={8}>
         <MessageForm />
       </Col>
     </Row>
